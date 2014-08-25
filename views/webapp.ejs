@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link rel="apple-touch-startup-image" href="images/apple-touch-startup-image-320x460.png" />
+  <meta name="description" content="Web Application Demo" />
+  <meta name="keywords" content="Require.js, JQuery, Bootstrap, responsive" />
+  <meta name="Author" content="Simy Mo" />
+  <title>JS Web Applcation Demo</title>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Muli:300,400' rel='stylesheet' type='text/css' /> -->
+  <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="header">
+    <div class="header-container">
+      <div id="fnbtn" class="header-button gomenu fl">
+        <img src="images/logo-s.png" alt="" title="" />
+        <div id="btn-title">Responsive</div>
+      </div>
+      <div class="header-button gohome fr" id="gohome">
+        <a href="#">
+          <img src="images/arrow-right.png" alt="" title="" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="iframe"></div>
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+
+      <!--Menu page-->
+      <div class="swiper-slide" style="min-height: 100%;">
+        <div class="swiper-container swiper-nested0">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-inner">
+                <div class="logo"></div>
+                <div class="menu">
+                  <div class="menu-item green" id='todo-block'>
+                    <img src="images/note.png" alt="" title="" />
+                    <span>To-Do</span>
+                  </div>
+                  <div class="menu-item red" id='rss-block'>
+                    <img src="images/rss.png" alt="" title="" />
+                    <span>RSS Reader</span>
+                  </div>
+                  <div class="menu-item bluegreen" id='weather-block'>
+                    <div id="weather-holder">
+                      <img class="weather-icon" src="images/weather.png" alt="" title="" />
+                      <span>Weather</span>
+                    </div>
+                    <ul id="real-weather"></ul>
+                  </div>
+                  <div class="menu-item navyblue" id='settings-block'>
+                    <img src="images/setting.png" alt="" title="" />
+                    <span>Settings</span>
+                  </div>
+                  <div class="clearfix"></div>
+                </div><!--End of menu-->
+                <div id="weather"></div>
+              </div><!-- End of slide-inner -->
+            </div>
+          </div><!-- End of swiper-wrapper -->
+        </div><!-- End of swiper-container -->
+      </div><!-- End of swiper-slide -->
+
+      <!--Todo page-->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-nested1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-inner">
+                <div class="pages-container">
+                  <div id="task-menu">
+                  </div>
+                  <div id="add-task" class="blue">
+                    <textarea id='newtask' placeholder="Add your task from here."></textarea>
+                    <div class="task-opt">
+                      <span>Important Task?</span>
+                      <div class="iptswitch fr">
+                        <input type="checkbox" class="iptswitch-checkbox" id="myiptswitch">
+                        <label class="iptswitch-label" for="myiptswitch">
+                          <span class="iptswitch-inner"></span>
+                          <span class="iptswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="task-opt">
+                      <div id='add-task-btn'>Add Task</div>
+                    </div>
+                  </div>
+                </div><!--End of page container-->
+              </div><!-- End of slide-inner -->
+            </div>
+          </div><!-- End of swiper-wrapper -->
+        </div><!-- End of swiper-container -->
+      </div><!-- End of swiper-slide -->
+
+      <!--RSS feed page -->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-nested2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="rss-page">
+              <div class="slide-inner" id="page-height">
+                <div class="pages-container">
+                  <div id="feed-title" class="white">
+                    <h3>RSS News</h3>
+                    <span id="change-feed">(CHANGE)</span>
+                  </div>
+                  <div id="google-news"></div>
+                  <div class="rss-load-more">
+                    <a href="#" id="load-more">Load more</a>
+                  </div>
+                </div><!--End of page container-->
+              </div><!-- End of slide-inner -->
+            </div>
+          </div><!-- End of swiper-wrapper -->
+        </div><!-- End of swiper-container -->
+      </div><!-- End of swiper-slide -->
+
+
+      <!--Setting page content-->
+      <div class="swiper-slide">
+        <div class="swiper-container swiper-nested3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="setting-page lightgray">
+
+                <!--Introduction part-->
+                <div class="intro container navyblue">
+                  <div class="row">
+                    <div class="col-md-2 text-center">
+                      <img src="images/logo.png" alt="" title="" />
+                    </div>
+                    <div class="col-md-10">
+                      <div class="intro-title">
+                        <h2>JavaScript Single Page web Application (SPA) Demo</h2>
+                      </div>
+                      <div class="intro-subtitle">- HTML5, CSS3, JavaScipt (Node.js, JQuery, Angular.js, Require.js), and Bootstrap</div>
+                      <div class="intro-subtitle">- Responsive design for Computer, Tablet, and Smart Phone</div>
+                      <div class="intro-subtitle">- by Simy Mo</div>
+                    </div>
+                  </div>
+                </div><!-- End of Introduction part-->
+
+                <!--Setting part-->
+                <div class="part-title">
+                  RSS SUBSCRIPTION
+                </div>
+                <div class="setting-part">
+                  <div class="setting-desc">Please input an RSS source you want to subcript (e.g. http://rss.cnn.com/rss/cnn_topstories.rss):</div>
+                  <div class="input-group">
+                    <input type="text" id="rss-link-setting" class="form-control" />
+                    <span class="input-group-btn">
+                      <button id="rss-submit" class="btn btn-default" type="button">Subcript</button>
+                    </span>
+                  </div>
+                  <div id="rss-result" class="setting-desc"> </div>
+                </div>
+
+                <div class="part-title">
+                  WEATHER LOCATION
+                </div>
+                <div class="setting-part">
+                  <div class="setting-opt">
+                    <div class="opt-desc">Auto-detect My Location:</div>
+                    <div id="auto-loc-switcher" class="settingswc">
+                      <input type="checkbox" name="settingswc" class="settingswc-checkbox" id="auto-loc-setting" checked>
+                      <label class="settingswc-label" for="mysettingswc">
+                        <span class="settingswc-inner"></span>
+                        <span class="settingswc-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id = "loc-settings" class="setting-part">
+                    <input type="text" id="weather-city-setting"  class="inline-input form-control" disabled />
+                    <input type="text" id="weather-country-setting" class="inline-input form-control" disabled />
+                    <input type="button" id="location-submit" class="btn" type="button" value="Update" disabled>
+                  </div>
+                  <div id="loc-result" class="setting-desc"> </div>
+                </div>
+                <!--End of Setting part-->
+
+              </div><!-- End of Setting page -->
+            </div>
+          </div><!-- End of swiper-wrapper -->
+        </div><!-- End of swiper-container -->
+      </div><!-- End of swiper-slide -->
+
+    </div><!--End of swiper wrapper-->
+
+    <div class="pagination"></div>
+  </div><!-- End of swiper-container -->
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js" data-main="js/main" defer async="true"></script>
+</body>
+</html>

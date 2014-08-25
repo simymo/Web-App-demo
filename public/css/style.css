@@ -1,0 +1,310 @@
+/* Main style.css for web app demo
+/* Author: Simy Mo;
+/*-----------------------------------------------------------------------------------*/
+
+
+/* CSS Reset
+/*-----------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; }
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .clearfix { display: inline-block; } /* Hide from IE Mac \*/ .clearfix { display: block; } /* End hide from IE Mac */ .none { display: none; } /* End Clearfix */
+
+ input[type="text"]:focus{outline: 0; box-shadow:none;}
+
+/* CSS Classes
+/*-----------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: gothic;
+    src: url(../fonts/GOTHIC.TTF);
+}
+
+a.button_12{ width:48%; margin:0 1% 10px 1%;padding:10px 0; float:left; display:block;font-size:18px; text-decoration:none; text-align:center;}
+a.button_11{ width:98%; margin:0 0 10px 1%;padding:10px 0; float:left; display:block;font-size:18px; text-decoration:none; text-align:center;}
+
+.green{ background-color:#3E7036;}
+.blue{ background-color:#327490;}
+.bluegreen{ background-color:#358282;}
+.red{ background-color:#C05A59;}
+.rose{ background-color:#563C45;}
+.pink{ background-color:#D87C68;}
+.orange{ background-color:#E27A3F;}
+.black{ background-color:#272625;}
+.gray{ background-color:#6e6e6e;}
+.yellow{ background-color:#997522;}
+.navyblue{ background-color:#334D5C;}
+.white{ background-color:#F2F2F2;}
+.lightgray{ background-color: #E8EDF1}
+
+.border-1{border: 1px solid #FFF;}
+.border-2{border: 2px solid #FFF;}
+.border-4{border: 4px solid #FFF;}
+
+.border-green{ border-color:#5BCC32;}
+.border-blue{ border-color:#45B29D;}
+.border-darkblue{ border-color:#035792;}
+.border-red{ border-color:#DF4949;}
+.border-purple{ border-color:#8b2767;}
+.border-pink{ border-color:#f87c68;}
+.border-orange{ border-color:#E27A3F;}
+.border-black{ border-color:#272625;}
+.border-gray{ border-color:#6e6e6e;}
+.border-yellow{ border-color:#ffb606;}
+.border-navyblue{ border-color:#334D5C;}
+.border-white{ border-color:#F2F2F2;}
+.fullwidth {width: 100%;}
+.radius4{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.radius8{-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;}
+
+.fl{float:left;}
+.fr{float:right;}
+
+.table{display: table}
+.table-cell {display:table-cell; vertical-align: middle;}
+.text-center {text-align: center;}
+
+
+/* Headings
+/*------------------------------------------*/
+h1, h2, h3, h4, h5, h6{font-weight:normal; margin:0px;padding:10px 0 20px 0;clear:both; letter-spacing:-1px;}
+h1{ font-size:28px;}
+h2{ font-size:22px;}
+h3{ font-size:20px;}
+h4{ font-size:18px;}
+h5{ font-size:14px;}
+h6{ font-size:12px;}
+p{ padding:0 0 10px 0; margin:0px;}
+h2.page_title{ font-size:30px;padding:0 0 20px 0;}
+
+/* General Setup
+/*-----------------------------------------------------------------------------------*/
+html{ height:100%;}
+body{font-family:'Lato', Arial, 'Microsoft YaHei', Helvetica, sans-serif;padding:0;font-size:12px;margin:0 auto;height: 100%;position: relative;line-height:19px; background: url(../images/bg-metro.jpg) no-repeat; background-attachment:fixed; background-size: cover;}
+a, span.tag{ text-decoration:none;}
+a.view_details{padding:0 0 0 15px;}
+.swiper-slide{position: relative;}
+.swiper-container{width: 100%; height: 100%; /*margin: 0 3% 5% 3%;*/}
+.swiper-wrapper{height: 100%;}
+.pages-container{ margin:60px 2.5%; background:none;  border:none; }
+
+/*----------bottom bullets pagination---------------*/
+.pagination {position: absolute;z-index: 20;left:0px;bottom:5px;text-align:center;width:100%;}
+.swiper-pagination-switch {display: inline-block;width:12px;height:3px;background: #222;margin-right: 5px;opacity: 0.5;cursor: pointer;}
+.swiper-active-switch {background: #fff;}
+
+/*----------header and footer buttons---------------*/
+#header{ position:absolute; background-color: #2B2D3A; top:0; left:0; z-index:9999; width:100%; height:40px;}
+.header-container{width: 90%;  margin: 0 auto; padding: 0 5px}
+
+.header-button {height:40px;}
+#btn-title {color: #F3F3F3; line-height: 30px; display: inline-block;float: right;margin: 10px 0 0 5px;font-size: 16px;}
+.header-button img {height: 30px; margin: 5px 0; float: left; cursor:pointer;}
+#fnbtn {}
+
+
+/* Menu style
+/*------------------------------------------*/
+.menu{ width:100%; height: auto; padding-left: 3%; padding-right: 3%; margin: 22% auto 0 auto;}
+.menu ul{ list-style:none; padding:0px; margin:0px; width:100%;}
+.menu-item { position:relative; margin: 1%; width:180px; max-width: 48%; height: 27%; float:left; display:block; text-align:center; }
+.menu-item  span{ display:block; color:#FFFFFF; text-align:center; font-size:14px; line-height:25px;}
+.menu-item  img{ display:inline-block;max-width:56%; margin: 15% auto;}
+
+
+/* News Page
+/*------------------------------------------*/
+#google-news {max-width: 900px; margin: 0 auto;}
+#feed-title {color: #333; padding: 10px; max-width: 900px; margin: 0 auto;}
+#feed-title h3 {padding: 0; display: inline-block;}
+#change-feed {color: blue; padding-left: 20px; cursor:pointer;}
+.news-block {margin: 15px auto;height: 300px;/* overflow: hidden; */}
+.news-item { padding: 10px; font: 16px/22px arial,'Microsoft YaHei',sans-serif; color: #333; height: 100%; /* overflow: hidden; */}
+.news-item img{display: none; max-width: 40%; height: auto; float: left; margin-right: 10px;}
+.news-item h3{ padding: 10px 0 5px 0;}
+.news-item a{ color: #333;}
+.news-item a:hover{ text-decoration: none;}
+.news-item span { display: block; color: #999; font-size:14px;  font-style: italic; padding-bottom: 10px;}
+.news-content {overflow: hidden;height: 100%;}
+#iframe {position: fixed; width: 100%; height: 100%; background: #FFF; z-index: 100; right: -100%; display: none;}
+.rss-load-more{width: 100px; height:40px;margin:auto;border:1px #fff solid; border-radius: 5px;}
+.rss-load-more a{ color:#FFFFFF; text-decoration:none; /* font-weight:bold; */ font-size:14px; display:block; text-align:center; line-height: 36px; /* border-radius: 5px; */}
+
+
+/* Weather
+/*------------------------------------------*/
+#real-weather{ width: 100%; height: 100%; position: absolute; top: 0; left: 0; opacity: 0; padding: 10px; text-align: left; color: #FFFFFF; font: 16px/18px gothic, arial;}
+#real-weather img{position: absolute; margin: 0; width: 50px;}
+.wtr-desc {width: 100%; line-height: 16px; padding-left: 60px; margin-top: 5px; height: 32%; overflow: hidden;font-size: 14px;}
+.wtr-temp {text-align: center; font-size: 42px; margin: 8% 0 8%;}
+.wtr-temp span{display: inline; bottom: 20px; position: relative;}
+.wtr-maxmin {padding-right: 5%; text-align: right;}
+
+/* todo
+/*------------------------------------------*/
+#task-menu{color: #F3F3F3; width: 100%}
+.task-item { margin: 1%; width: 280px; max-width: 98%; min-height: 120px; text-align:center; display: inline-block; padding-bottom: 25px;}
+.task-item  span{ display:block; }
+.status-type {text-align:center; font-size:14px; line-height:25px; position: absolute; bottom: 0; left: 10px;}
+.task-item textarea { background: none; border: none; resize: none; overflow-y:visible }
+.task-content {text-align: left; font: 20px/26px arial, 'Microsoft YaHei', sans-serif; padding: 23px 65px 23px 10px; word-wrap: break-word; word-break: normal;  }
+.task-btnholder {position: absolute;top: 10px; right: 5px;}
+.task-btn {position: relative; width: 50px; height: 50px;  background-position:center; background-repeat:no-repeat;}
+.finished {text-decoration: line-through; color: #BBBBBB;}
+.finish-task { background-image: url(../images/tick.png); }
+.delete-task { background-image: url(../images/cross.png); border:none;border-bottom: 1px solid #bbb;}
+.hred:hover { background-color: #A84341;}
+.hblue:hover { background-color: #125470;}
+#add-task {position: absolute; top: 130px; right: 10%;height: 350px;padding: 20px;color: #F3F3F3; width: 245px; display: none;}
+#add-task textarea {background: none; resize: none; width: 100%;height: 200px; border: 1px solid #F3F3F3;font: 18px/24px arial,'Microsoft YaHei', sans-serif; padding: 10px;}
+.task-opt { margin:15px 0;}
+.task-opt span{ line-height: 35px; font-size: 16px; }
+#add-task-btn {padding: 6px 14px; background-color: #F3F3F3; color: #555; display: inline-block; cursor:pointer}
+
+
+/* settings
+/*------------------------------------------*/
+.setting-page {width: 100%; max-width: 800px; min-height: 80%; margin: 60px auto; padding: 15px; }
+.intro {width: 100%; padding: 15px; color: #F3F3F3;font-size: 14px;line-height: 22px;}
+.intro img {margin: 0 auto; max-width: 100%;height: auto;}
+.intro-title {}
+.intro-subtitle{ text-indent:30px;}
+.part-title {font-size: 18px; line-height: 30px;margin: 15px 0 5px 15px;font-weight: bold;}
+.setting-part {width: 100%; padding: 20px 15px; background-color: #FFFFFF; font-size: 14px;}
+.setting-desc {color: #555; font-style: italic; margin-bottom: 10px; word-wrap: break-word; word-break: normal;}
+.setting-input {width: 100%; line-height: 30px; margin-bottom: 20px}
+.setting-opt { margin-bottom: 10px; padding: 10px;}
+.opt-desc { display: inline-block; line-height: 35px; position: relative; top: -10px; margin-right: 10px; }
+.settingswc{ display: inline-block; }
+.inline-input {display: inline-block; max-width: 200px;}
+#location-submit {position: relative; bottom: 2px;}
+.result_success {color: green;}
+.result_failed {color: red;}
+
+/**** Transitions ****/
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.3s;
+     -moz-transition-duration: 0.3s;
+      -ms-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+.settingswc, .iptswitch {
+    position: relative; width: 60px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.settingswc-checkbox, .iptswitch-checkbox {
+    display: none;
+}
+
+.settingswc-label, .iptswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #F3F3F3; border-radius: 0px;
+}
+
+.settingswc-label {
+    border-color: #333;
+}
+
+.settingswc-inner, .iptswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.1s ease-in 0s; -webkit-transition: margin 0.1s ease-in 0s;
+    -o-transition: margin 0.1s ease-in 0s; transition: margin 0.1s ease-in 0s;
+}
+
+.settingswc-inner:before, .settingswc-inner:after, .iptswitch-inner:before, .iptswitch-inner:after {
+    display: block; float: left; width: 50%; height: 25px; padding: 0; line-height: 21px;
+    font-size: 12px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.settingswc-inner:before, .iptswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #327490; color: #FFFFFF;
+}
+
+.settingswc-inner:before{
+    background-color: #334D5C; color: #FFFFFF;
+}
+
+.settingswc-inner:after, .iptswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #C05A59; color: #FFFFFF;
+    text-align: right;
+}
+
+.settingswc-inner:after {
+    background-color: #333; color: #333333;
+}
+
+.settingswc-switch, .iptswitch-switch {
+    display: block; width: 25px; margin: 0px;
+    background: #F3F3F3;
+    position: absolute; top: 0; bottom: 0; right: 40px;
+    -moz-transition: all 0.1s ease-in 0s; -webkit-transition: all 0.1s ease-in 0s;
+    -o-transition: all 0.1s ease-in 0s; transition: all 0.1s ease-in 0s;
+}
+
+.settingswc-switch {
+  background: #333;
+}
+
+.iptswitch-checkbox:checked + .iptswitch-label .iptswitch-inner {
+    margin-left: 0;
+}
+
+.iptswitch-checkbox:checked + .iptswitch-label .iptswitch-switch {
+    right: 0px;
+}
+
+.settingswc-checkbox:checked + .settingswc-label .settingswc-inner {
+    margin-left: 0;
+}
+
+.settingswc-checkbox:checked + .settingswc-label .settingswc-switch {
+    right: 0px;
+}
+
+/* CSS Media Queries
+/*-----------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 360px) {
+
+}
+@media screen and (min-width: 760px) {
+ #task-menu{padding-right: 35%;}
+ .swiper-container{max-width:96%;}
+ .pages-container{padding:20px 2.5%;}
+ .news-item img {display: block;}
+ #add-task {display: block;}
+}
+
+@media screen and (max-width: 1000px) {
+.intro-title {text-align: center;}
+}
