@@ -24,22 +24,24 @@ define('swiperObjects', ['swiper', 'transit'], function(swiper) {
             case 1:
                 $('#gohome img').attr('src','images/arrow-right.png');
                 $('#fnbtn img').css({opacity: 0}).attr('src','images/plus.png').transition({opacity: 100},400);
-                $('#btn-title').css({display:'none'});
+                $('#btn-title').css({opacity: 0}).html('Add Task').transition({opacity: 100},400);
                 break;
             case 2:
                 $('#gohome img').attr('src','images/arrow-right.png');
                 $('#fnbtn img').css({opacity: 0}).attr('src','images/refresh.png').transition({opacity: 100},400);
-                $('#btn-title').css({display:'none'});
+                $('#btn-title').css({opacity: 0}).html('Refresh').transition({opacity: 100},400);
                 break;
             case 3:
                 $('#gohome img').css({opacity: 0}).attr('src','images/home.png').transition({opacity: 100},400);
                 $('#fnbtn img').css({opacity: 0}).attr('src','images/logo-s.png').transition({opacity: 100},400);
-                $('#btn-title').css({opacity: 0, display:'inline-block'}).transition({opacity: 100},400);
+                $('#btn-title').css({opacity: 0}).html('Responsive').transition({opacity: 100},400);
                 break;
-            default:
+            case 0:
                 $('#gohome img').css({opacity: 0}).attr('src','images/arrow-right.png').transition({opacity: 100},400);
                 $('#fnbtn img').css({opacity: 0}).attr('src','images/logo-s.png').transition({opacity: 100},400);
-                $('#btn-title').css({opacity: 0, display:'inline-block'}).transition({opacity: 100},400);
+                $('#btn-title').css({opacity: 0}).html('Responsive').transition({opacity: 100},400);
+				break;
+			default:
         }
     };
 

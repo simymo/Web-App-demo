@@ -28,7 +28,7 @@ define('rssReader', ['jquery', 'transit'], function($) {
             right: 0
         }, 300);
 
-        setTimeout( //set a timeout: load the iframe after the animation is finished, to make the animation smooth
+        setTimeout( //set a timeout: load the iframe after the animation is finished in order to smooth the animation 
             function() {
                 $('<iframe>', {
                     src: src,
@@ -85,6 +85,7 @@ define('rssReader', ['jquery', 'transit'], function($) {
 
             //btns in the navi-bar
             $('#fnbtn img').attr('src', 'images/back.png');
+			$('#btn-title').html('Back');
             $('#gohome').css({
                 display: 'none'
             });
@@ -94,20 +95,15 @@ define('rssReader', ['jquery', 'transit'], function($) {
                 $('#iframe').empty().transition({
                     right: '-100%'
                 }, 300);
-                $('#fnbtn img').css({
-                    opacity: 0
-                }).attr('src', 'images/refresh.png').transition({
-                    opacity: 100
-                }, 400);
-                $('#btn-title').css({
-                    display: 'none'
-                });
+                $('#fnbtn img').attr('src', 'images/refresh.png');
+                $('#btn-title').html('Refresh');
                 $('#fnbtn').unbind('mouseup').mouseup(function() {
                     refreshRss(localStorage.setting_rssLink);
                 });
                 $('#gohome').css({
                     display: 'block'
                 });
+				
             });
             return false;
 
