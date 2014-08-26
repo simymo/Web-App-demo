@@ -3,7 +3,7 @@ Web-App-demo
 
 JavaScript Single Page Application Demo
 
--	Built this web application using Node.js and JQuery, Angular.js and Bootstrap; JS libraries asynchronous loading control by Require.js, Back-End API server was hosted in Amazon Web Service (AWS) server.
+-	This web application was bulit with Node.js and JQuery, Angular.js and Bootstrap; JS libraries asynchronous loading control by Require.js, Back-End API server was hosted in Amazon Web Service (AWS) server.
 
 -	4 main modules: (1) To-Do list; (2) RSS Reader; (3) Auto detected Geolocation; (4) Weather
 
